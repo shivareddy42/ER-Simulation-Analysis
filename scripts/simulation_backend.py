@@ -1,6 +1,7 @@
 import simpy
 import numpy as np
 import pandas as pd
+import os
 
 def run_er_simulation(num_doctors, num_nurses, arrival_rate, sim_time=240):
     """
@@ -15,7 +16,11 @@ def run_er_simulation(num_doctors, num_nurses, arrival_rate, sim_time=240):
       - sim_time: Simulation time in minutes (default is 240 minutes = 4 hours).
     """
     # Load the cleaned dataset from disk. (Adjust the path to your cleaned ER data.)
-    df = pd.read_csv("../data/cleaned_er_data.csv")
+    THIS_DIR = os.path.dirname(os.path.abspath(__file__))  # This file's directory
+    DATA_PATH = os.path.join(THIS_DIR, "..", "data", "cleaned_er_data.csv")
+
+    df = pd.read_csv(DATA_PATH)
+
     
     # Use the preprocessed columns (ensure these match your preprocessing code)
     REGISTRATION_MEAN = df['Time_to_Registration'].mean()
