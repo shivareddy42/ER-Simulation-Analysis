@@ -1,6 +1,5 @@
 # 🚑 ER Operations Simulation Dashboard
 
-![ER Dashboard Banner](https://via.placeholder.com/1200x300?text=ER+Operations+Simulation+Dashboard)  
 
 
 ## Overview
