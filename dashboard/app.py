@@ -102,9 +102,9 @@ if st.sidebar.button("Run Simulation"):
     # -------------------------------
     with st.expander("📊 More EDA Plots"):
         st.markdown("These static plots, generated during the exploratory data analysis phase, provide additional insights into the ER dataset.")
-        st.image("C:/Users/shiva/Desktop/ER-Simulation-Analysis/plots/avg_wait_time_by_hospital.png", caption="Average Wait Time by Hospital", use_container_width=True)
-        st.image("C:/Users/shiva/Desktop/ER-Simulation-Analysis/plots/avg_wait_time_by_urgency.png", caption="Average Wait Time by Urgency Level", use_container_width=True)
-        st.image("C:/Users/shiva/Desktop/ER-Simulation-Analysis/plots/correlation_heatmap.png", caption="Correlation Heatmap", use_container_width=True)
+        st.image("../plots/avg_wait_time_by_hospital.png", caption="Average Wait Time by Hospital", use_container_width=True)
+        st.image("../plots/avg_wait_time_by_urgency.png", caption="Average Wait Time by Urgency Level", use_container_width=True)
+        st.image("../plots/correlation_heatmap.png", caption="Correlation Heatmap", use_container_width=True)
 
 # -------------------------------
 # About Section (Always Visible)
