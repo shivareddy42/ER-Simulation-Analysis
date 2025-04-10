@@ -11,6 +11,9 @@ import plotly.express as px
 import pandas as pd
 from scripts.simulation_backend import run_er_simulation
 
+# Build the path to the "plots" folder relative to this file (app.py)
+plots_dir = os.path.join(current_dir, "..", "plots")
+
 # -------------------------------
 # Dashboard Title & Description
 # -------------------------------
@@ -74,7 +77,7 @@ if st.sidebar.button("Run Simulation"):
     st.markdown("---")
     
     # -------------------------------
-    # Plot 2: Queue Length over Time (Dynamic Simulation Data)
+    # Plot 2: Queue Length over Time
     # -------------------------------
     st.subheader("Queue Length Over Time")
     if results['Time Points'] and results['Queue Lengths']:
@@ -102,9 +105,9 @@ if st.sidebar.button("Run Simulation"):
     # -------------------------------
     with st.expander("📊 More EDA Plots"):
         st.markdown("These static plots, generated during the exploratory data analysis phase, provide additional insights into the ER dataset.")
-        st.image("../plots/avg_wait_time_by_hospital.png", caption="Average Wait Time by Hospital", use_container_width=True)
-        st.image("../plots/avg_wait_time_by_urgency.png", caption="Average Wait Time by Urgency Level", use_container_width=True)
-        st.image("../plots/correlation_heatmap.png", caption="Correlation Heatmap", use_container_width=True)
+        st.image(os.path.join(plots_dir, "avg_wait_time_by_hospital.png"), caption="Average Wait Time by Hospital", use_container_width=True)
+        st.image(os.path.join(plots_dir, "avg_wait_time_by_urgency.png"), caption="Average Wait Time by Urgency Level", use_container_width=True)
+        st.image(os.path.join(plots_dir, "correlation_heatmap.png"), caption="Correlation Heatmap", use_container_width=True)
 
 # -------------------------------
 # About Section (Always Visible)
