@@ -16,10 +16,9 @@ def run_er_simulation(num_doctors, num_nurses, arrival_rate, sim_time=240):
       - sim_time: Simulation time in minutes (default is 240 minutes = 4 hours).
     """
     # Load the cleaned dataset from disk. (Adjust the path to your cleaned ER data.)
-    THIS_DIR = os.path.dirname(os.path.abspath(__file__))  # This file's directory
-    DATA_PATH = os.path.join(THIS_DIR, "..", "data", "cleaned_er_data.csv")
-
-    df = pd.read_csv(DATA_PATH)
+    script_dir = os.path.dirname(os.path.abspath(__file__))  
+    data_path = os.path.join(script_dir, "..", "data", "cleaned_er_data.csv")
+    df = pd.read_csv(data_path)
 
     
     # Use the preprocessed columns (ensure these match your preprocessing code)
